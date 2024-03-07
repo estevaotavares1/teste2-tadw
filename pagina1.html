@@ -17,30 +17,35 @@
                 // alert("erro");
                 document.getElementById("nome").focus();
                 document.getElementById("avisos").innerHTML = "Campo nome não pode ficar em branco!";
+                alert("Erro campo nome")
                 return false;
             }
 
             if (sobrenome == "") {
                 document.getElementById("sobrenome").focus();
                 document.getElementById("avisos").innerHTML = "Campo sobrenome não pode ficar em branco!";
+                alert("Erro campo Sobrenome")
                 return false;
             }
             if (cpf == "") {
                 document.getElementById("cpf").focus();
                 document.getElementById("avisos").innerHTML = "Campo cpf não pode ficar em branco!";
+                alert("Erro campo cpf")
                 return false;
             }
             if (email == "") {
                 document.getElementById("email").focus();
                 document.getElementById("avisos").innerHTML = "Campo email não pode ficar em branco!";
+                alert("Erro campo email")
                 return false;
             }
             if (senha == "") {
                 document.getElementById("senha").focus();
                 document.getElementById("avisos").innerHTML = "Campo senha não pode ficar em branco!";
+                alert("Erro campo senha")
                 return false;
             } else {
-                document.getElementById("avisob").innerHTML = "Sucesso";
+                alert("Sucesso");
                 }
                 
 
@@ -49,7 +54,7 @@
 </head>
 <body>
     <div id="avisos" style="color: red;"></div> <br>
-    <div id="avisob" style="color: red;"></div> <br>
+    <div id="avisob" style="color: green;"></div> <br>
     <form onsubmit="return validar()">
         Nome: <br>
         <input type="text" name="nome" id="nome"> <br><br>
