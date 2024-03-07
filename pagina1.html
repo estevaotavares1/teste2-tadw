@@ -9,6 +9,9 @@
             // alert("enviou os dados");
             let nome = document.getElementById("nome").value;
             let sobrenome = document.getElementById("sobrenome").value;
+            let cpf = document.getElementById("cpf").value;
+            let email = document.getElementById("email").value;
+            let senha = document.getElementById("senha").value; 
 
             if (nome == "") {
                 // alert("erro");
@@ -22,18 +25,43 @@
                 document.getElementById("avisos").innerHTML = "Campo sobrenome não pode ficar em branco!";
                 return false;
             }
+            if (cpf == "") {
+                document.getElementById("cpf").focus();
+                document.getElementById("avisos").innerHTML = "Campo cpf não pode ficar em branco!";
+                return false;
+            }
+            if (email == "") {
+                document.getElementById("email").focus();
+                document.getElementById("avisos").innerHTML = "Campo email não pode ficar em branco!";
+                return false;
+            }
+            if (senha == "") {
+                document.getElementById("senha").focus();
+                document.getElementById("avisos").innerHTML = "Campo senha não pode ficar em branco!";
+                return false;
+            } else {
+                document.getElementById("avisob").innerHTML = "Sucesso";
+                }
+                
 
         }
     </script>
 </head>
 <body>
     <div id="avisos" style="color: red;"></div> <br>
+    <div id="avisob" style="color: red;"></div> <br>
     <form onsubmit="return validar()">
         Nome: <br>
         <input type="text" name="nome" id="nome"> <br><br>
 
         Sobrenome: <br>
         <input type="text" name="sobrenome" id="sobrenome"> <br><br>
+
+        cpf: <br>
+        <input type="text" name="cpf" id="cpf"> <br><br>
+
+        Email: <br>
+        <input type="text" name="email" id="email"> <br><br>
 
         Senha: <br>
         <input type="password" name="senha" id="senha"> <br><br>
